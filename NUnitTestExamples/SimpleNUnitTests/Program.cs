@@ -1,4 +1,8 @@
-﻿using System;
+﻿using SimpleNUnitTests.People;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 
 
 
@@ -22,20 +26,27 @@ namespace SimpleNUnitTests
         public static void Main(string[] args)
         {
 
+            // Set the culture.
+            String cultureString = "en-US";
+            //String cultureString = "cs-CZ";
+            CultureInfo ci = new CultureInfo(cultureString);
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+
             // Give some debug info.
-            Console.WriteLine("Hi there!");
+            //Console.WriteLine("Hi there!");
 
             // Give more info.
-            Console.WriteLine("Hello, mate!");
+            //Console.WriteLine("Hello, mate!");
 
             // Give even more info.
-            Console.WriteLine("Yep, I'm here, buddy!");
+            //Console.WriteLine("Yep, I'm here, buddy!");
 
             // Give one more log line.
-            Console.WriteLine("Keep thinking...");
+            //Console.WriteLine("Keep thinking...");
 
             // Leave out a blank line.
-            Console.WriteLine();
+            //Console.WriteLine();
 
             // Prepare a URL helper object.
             AppUrl appUrl = new AppUrl();
@@ -52,10 +63,43 @@ namespace SimpleNUnitTests
             // Leave out a blank line.
             Console.WriteLine();
 
+            // Read persons from the example file.
+            String fileName = @"..\..\People\InputDataExample.csv";
+            FileParser fileParser = new FileParser(fileName);
+            IList<Person> persons = fileParser.ParsePersons();
+
+            // Display persons' info.
+            Console.WriteLine("Persons:");
+            foreach (Person person in persons)
+            {
+                Console.WriteLine(person);
+            }
+
             // Stop the execution until the user presses ENTER.
             Console.Write("Press ENTER to finish the app.");
             Console.ReadLine();
 
+        }
+
+
+
+        /// <summary>
+        /// Operates with dates and/or times.
+        /// </summary>
+        private static void DoSomethingWithDateTime()
+        {
+            DateTime dateTime = new DateTime(2020, 4, 20);
+        }
+
+
+
+        /// <summary>
+        /// Operates with booleans.
+        /// </summary>
+        private static void DoSomethingWithBoolean()
+        {
+            Boolean flag = true;
+            //flag = Boolean.FalseString;
         }
 
 

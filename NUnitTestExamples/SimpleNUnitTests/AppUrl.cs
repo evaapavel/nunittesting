@@ -86,6 +86,7 @@ namespace SimpleNUnitTests
         public String getRootUrl()
         {
             return protocol + "://" + hostname + (port != null ? ":" + port.ToString() : "");
+            //return protocol + "://" + hostname + (port != null ? ":" + port.ToString() : "") + "/";
         }
 
 
