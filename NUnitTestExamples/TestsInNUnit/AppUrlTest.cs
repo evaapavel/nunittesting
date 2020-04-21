@@ -31,7 +31,7 @@ namespace TestsInNUnit
         [Test]
         public void TestRootUrl()
         {
-            String rootUrl = appUrl.getRootUrl();
+            String rootUrl = appUrl.GetRootUrl();
             Console.WriteLine("Testing the URL: {0}", rootUrl);
             Assert.IsTrue(Uri.IsWellFormedUriString(rootUrl, UriKind.Absolute), "This URL is not valid: {0}", rootUrl);
         }
@@ -41,7 +41,7 @@ namespace TestsInNUnit
         [Test]
         public void TestProjectUrl()
         {
-            String projectUrl = appUrl.getProjectUrl();
+            String projectUrl = appUrl.GetProjectUrl();
             Console.WriteLine("Testing the URL: {0}", projectUrl);
             Assert.AreEqual("https://www.projectliner.com/project/list", projectUrl, "The URL of the project list is not as expected: {0}", projectUrl);
         }
@@ -51,7 +51,7 @@ namespace TestsInNUnit
         [Test]
         public void TestContactUrl()
         {
-            String contactUrl = appUrl.getContactUrl();
+            String contactUrl = appUrl.GetContactUrl();
             Console.WriteLine("Testing the URL: {0}", contactUrl);
             // ***
             //Assert.Pass(new Uri(contactUrl));

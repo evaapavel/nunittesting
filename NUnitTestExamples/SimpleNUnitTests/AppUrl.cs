@@ -83,7 +83,7 @@ namespace SimpleNUnitTests
         /// Gets the root URL for the app.
         /// </summary>
         /// <returns>Return the app's root URL.</returns>
-        public String getRootUrl()
+        public String GetRootUrl()
         {
             return protocol + "://" + hostname + (port != null ? ":" + port.ToString() : "");
             //return protocol + "://" + hostname + (port != null ? ":" + port.ToString() : "") + "/";
@@ -95,9 +95,9 @@ namespace SimpleNUnitTests
         /// Gets the URL for the project list.
         /// </summary>
         /// <returns>Returns the project list's URL.</returns>
-        public String getProjectUrl()
+        public String GetProjectUrl()
         {
-            return getRootUrl() + projectRoute;
+            return GetRootUrl() + projectRoute;
         }
 
 
@@ -106,9 +106,9 @@ namespace SimpleNUnitTests
         /// Gets the URL for the contacts.
         /// </summary>
         /// <returns>Returns the contact's URL.</returns>
-        public String getContactUrl()
+        public String GetContactUrl()
         {
-            return getRootUrl() + contactRoute;
+            return GetRootUrl() + contactRoute;
         }
 
 

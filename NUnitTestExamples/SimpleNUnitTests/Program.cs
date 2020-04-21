@@ -52,13 +52,13 @@ namespace SimpleNUnitTests
             AppUrl appUrl = new AppUrl();
 
             // Display the root URL.
-            Console.WriteLine("The application root is:     {0}", appUrl.getRootUrl());
+            Console.WriteLine("The application root is:     {0}", appUrl.GetRootUrl());
 
             // Display the projects' URL.
-            Console.WriteLine("The project list page is:    {0}", appUrl.getProjectUrl());
+            Console.WriteLine("The project list page is:    {0}", appUrl.GetProjectUrl());
 
             // Display the contacts' URL.
-            Console.WriteLine("The contacts' page is:       {0}", appUrl.getContactUrl());
+            Console.WriteLine("The contacts' page is:       {0}", appUrl.GetContactUrl());
 
             // Leave out a blank line.
             Console.WriteLine();
